@@ -59,7 +59,7 @@ const CarInfo: React.FC<CarInfoProps> = ({ user }) => {
       userImage: user.userImage,
       dateofBirth: formData.dob,
       drivingExperience: formData.experience,
-      address: formData.addressofuser,
+      address: formData.address,
       vechile_cardNumber: formData.cardNumber,
       phoneNumber: formData.contactNumber,
       vechile_number: formData.cardNumber,
@@ -119,7 +119,7 @@ const CarInfo: React.FC<CarInfoProps> = ({ user }) => {
               <div className="w-full mt-2 h-[1px] bg-[#636363dd]" />
             </div>
 
-            <div className="data w-[396px] justify-evenly">
+            {/* <div className="data w-[396px] justify-evenly">
               <div className="bg-white flex mt-4">
                 <p className="text-[#8e8c8ee4] flex-shrink-0">Address</p>
                 <input
@@ -128,12 +128,12 @@ const CarInfo: React.FC<CarInfoProps> = ({ user }) => {
                   style={{ textAlign: "right" }}
                   placeholder="address"
                   name="Address"
-                  value={formData.addressofuser}
+                  value={formData.address}
                   onChange={handleChange}
                 />
               </div>
               <div className="w-full mt-2 h-[1px] bg-[#636363dd]" />
-            </div>
+            </div> */}
 
             <div className="data w-[396px] justify-evenly">
               <div className="bg-white flex mt-4">
@@ -253,7 +253,7 @@ const CarInfo: React.FC<CarInfoProps> = ({ user }) => {
             <div className="w-full mt-2 h-[1px] bg-[#636363dd]" />
           </div>
 
-          <div className="data w-[396px] justify-evenly">
+          {/* <div className="data w-[396px] justify-evenly">
             <div className="bg-white flex mt-4">
               <p className="text-[#8e8c8ee4] flex-shrink-0">Address</p>
               <p
@@ -265,7 +265,7 @@ const CarInfo: React.FC<CarInfoProps> = ({ user }) => {
               </p>
             </div>
             <div className="w-full mt-2 h-[1px] bg-[#636363dd]" />
-          </div>
+          </div> */}
 
           <div className="data w-[396px] justify-evenly">
             <div className="bg-white flex mt-4">
