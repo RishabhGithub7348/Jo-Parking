@@ -1,6 +1,8 @@
 "use client"
 import { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
+import { currentUser } from "@clerk/nextjs";
+import { fetchUser } from "@/lib/actions/user.actions";
 
 const getTimezoneByCountry = (country) => {
   const timezoneMap = {
@@ -24,10 +26,10 @@ export function UserContextProvider({ children }) {
   const [timezone, setTimezone] = useState('Europe/Berlin');
   const [showCalendar, setShowCalendar] = useState(true);
   const [showForm, setShowForm] = useState(false);
-  const [selectedTime, setSelectedTime] = useState('9:00');
-  const [box2Time, setBox2Time] = useState('9:30');
-  const [box3Time, setBox3Time] = useState('10:00 ');
-  const [box4Time, setBox4Time] = useState('10:30');
+  const [selectedTime, setSelectedTime] = useState('18:00');
+  const [box2Time, setBox2Time] = useState('18:15');
+  const [box3Time, setBox3Time] = useState('18:30');
+  const [box4Time, setBox4Time] = useState('18:45');
   const [selectedDay, setSelectedDay] = useState(null);
   const [selectedtime, setSelectedtime] = useState(null);
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -37,52 +39,95 @@ export function UserContextProvider({ children }) {
   const [profile, setProfile] = useState(null);
   const [bookedDates, setBookedDates] = useState([]);
   const [bookedTimes, setBookedTimes] = useState([]);
-  const [userData, setUserData] = useState('');
+  const [userVechile, setUserVechile] = useState(null);
+  const [bookingData, setBookingData] = useState([]);
+  const [data, setData] = useState([]);
  
   
   
-  const deleteReservation = (reservationId) => {
-    setReservations(prevReservations => {
-      const updatedReservations = prevReservations.filter(reservation => reservation._id !== reservationId);
-      setUpdate(true);
-      return updatedReservations;
-    });
-  };
-  
   
 
 
-const filterReservationsByDay = (reservations, day) => {
-  const filteredReservations = reservations.filter(reservation => {
-    const reservationDate = reservation.selectedDay;
-    const reservationDay = reservationDate;
-    return reservationDay === day;
-  });
-
-  return filteredReservations;
-};
-
-useEffect(() => {
-  const filtered = filterReservationsByDay(reservations, selectedDay);
-  setBookedDates(filtered);
-}, [selectedDay, reservations]);
-
-// console.log(bookedDates);
 
 
 
-useEffect(() => {
-  const extractedTime = bookedDates.map(reservation => reservation.selectedtime);
-  setBookedTimes(extractedTime);
-}, [bookedDates]);
 
-console.log(bookedTimes);
+
+
+
 
 
 
 
   
 
+
+  useEffect(() => {
+    async function bookingDetails() {
+      try {
+        // Make an Axios GET request to fetch user details using the provided objectId
+        const response = await axios.get(`/api/booking`);
+
+        setBookingData(response.data);
+      } catch (error) {
+        // Handle errors as needed
+        console.error('Error fetching user details:', error);
+      }
+    }
+
+    bookingDetails();
+  }, []);
+
+  console.log(bookingData);
+
+  
+
+  useEffect(() => {
+    async function fetchUserDetails() {
+      try {
+        // Make an Axios GET request to fetch user details using the provided objectId
+        const response = await axios.get(`/api/user`);
+
+        setUserVechile(response.data.vechileType);
+      } catch (error) {
+        // Handle errors as needed
+        console.error('Error fetching user details:', error);
+      }
+    }
+
+    fetchUserDetails();
+  }, []);
+
+    console.log(userVechile);
+
+
+    const filterReservationsByDay = (reservations, day) => {
+      const filteredReservations = reservations.filter(reservation => {
+        const reservationDate = reservation.selectedDay;
+        const reservationDay = reservationDate;
+        return reservationDay === day;
+      });
+    
+      return filteredReservations;
+    };
+    
+    useEffect(() => {
+      const filtered = filterReservationsByDay(bookingData, selectedDay);
+      setBookedDates(filtered);
+    }, [selectedDay, reservations]);
+    
+    // console.log(bookedDates);
+    
+    
+    
+    useEffect(() => {
+      const extractedTime = bookedDates.map(reservation => reservation.selectedtime);
+      setBookedTimes(extractedTime);
+    }, [bookedDates]);
+    
+    console.log(bookedTimes);
+
+    
   
 
 
@@ -120,6 +165,9 @@ console.log(bookedTimes);
         isAuth,
         setIsAuth,
         bookedTimes,
+        
+        setUserVechile,
+        userVechile
         
         
       }}

@@ -15,11 +15,28 @@ const bookingScheme = new mongoose.Schema({
     type: String,
     required: false,
   },
+  
+  
   author: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
     required: false,
   },
+  selectedDay: {
+    type: String,
+    required: false,
+  },
+  selectedtime: {
+    type: String,
+    required: false,
+  
+  },
+  vechile: {
+    type: String,
+    required: false,
+  
+  },
+  
  
  
 });

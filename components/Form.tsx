@@ -31,6 +31,7 @@ const Form = (user:any) => {
     setSelectedDay,
     selectedtime,
     setSelectedtime,
+    userVechile,
    } = useContext<any>(UserContext)
    const [formSubmitted, setFormSubmitted] = useState(false);
    console.log(selectedtime)
@@ -60,7 +61,10 @@ const Form = (user:any) => {
 
       slot: storedSpot,
       author: user.user.userinfo._id,
-      time:date
+      time:date,
+      selectedDay:selectedDay,
+      selectedtime:selectedtime,
+      vechile: userVechile,
 
     
     })

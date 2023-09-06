@@ -10,10 +10,13 @@ interface Params {
     time: string,
     path: string,
     author: string,
+    selectedDay: string,
+    selectedtime: string,
+    vechile: string,
 
   }
   
-export async function createBooking({ floor, slot, time, author, path }: Params) {
+  export async function createBooking({ floor, slot, time, author,selectedDay,selectedtime, vechile, path }: Params) {
     try {
       connectToDB();
   
@@ -24,6 +27,9 @@ export async function createBooking({ floor, slot, time, author, path }: Params)
         slot,
         author,
         time,
+        selectedDay,
+        selectedtime,
+        vechile
 
       });
   

@@ -224,11 +224,11 @@ const SetTime = (user: any, bookingInfo: any) => {
         </div>
       );
     } else {
-      const isDisabled = checkBookingConditions(user.user.userinfo.vechileType); // Check if the time is present in bookedTimes
+      const isDisabled = bookedTimes.includes(time); // Check if the time is present in bookedTimes
       return (
         <div
           className={`flex items-center justify-center  flex-col text-4xl w-[300px] h-[50px] border-blue-300 text-blue-600 font-bold text-center rounded-md border-2 p-2 cursor-pointer hover:bg-blue-200 ${
-            isDisabled ? "opacity-50 bg-rose-800 pointer-events-none  " : ""
+            isDisabled ? "opacity-50 bg-[#e23333] text-white pointer-events-none  " : ""
           }`}
           onClick={() => handleBoxClick(time)}
         >
