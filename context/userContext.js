@@ -24,10 +24,10 @@ export function UserContextProvider({ children }) {
   const [timezone, setTimezone] = useState('Europe/Berlin');
   const [showCalendar, setShowCalendar] = useState(true);
   const [showForm, setShowForm] = useState(false);
-  const [selectedTime, setSelectedTime] = useState('18:00');
-  const [box2Time, setBox2Time] = useState('18:15');
-  const [box3Time, setBox3Time] = useState('18:30');
-  const [box4Time, setBox4Time] = useState('18:45');
+  const [selectedTime, setSelectedTime] = useState('9:00');
+  const [box2Time, setBox2Time] = useState('9:30');
+  const [box3Time, setBox3Time] = useState('10:00 ');
+  const [box4Time, setBox4Time] = useState('10:30');
   const [selectedDay, setSelectedDay] = useState(null);
   const [selectedtime, setSelectedtime] = useState(null);
   const [currentDate, setCurrentDate] = useState(new Date());
@@ -41,41 +41,6 @@ export function UserContextProvider({ children }) {
  
   
   
-  
-
-  const fetchReservations = async () => {
-    try {
-      const response = await axios.get('http://localhost:3001/api/getAllData', {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem('token')}`,
-        },
-      });
-      const data = response.data;
-      setReservations(data);
-    } catch (error) {
-      console.error('Error fetching reservations:', error);
-    }
-  };
-  
-
-  useEffect(() => {
-    fetchReservations();
-  }, [setUpdate, update, isAuth ]);
-
-  const updateReservation = (reservationId, updatedData) => {
-    setReservations(prevReservations => {
-      return prevReservations.map(reservation => {
-        if (reservation._id === reservationId) {
-          // Update the reservation with the modified data
-          const updatedReservation = { ...reservation, ...updatedData };
-          setUpdate(true);
-          return updatedReservation;
-        }
-        return reservation;
-      });
-    });
-  };
-
   const deleteReservation = (reservationId) => {
     setReservations(prevReservations => {
       const updatedReservations = prevReservations.filter(reservation => reservation._id !== reservationId);
@@ -85,34 +50,7 @@ export function UserContextProvider({ children }) {
   };
   
   
-// Assuming you have stored the token in localStorage
 
-useEffect(() => {
-  const fetchUserData = async () => {
-    try {
-      // include the JWT token in the request headers
-      const token = localStorage.getItem('token');
-      const config = {
-        headers: { Authorization: `Bearer ${token}` },
-      };
-
-      // send the GET request to fetch the user's data
-      const response = await axios.get('http://localhost:3001/api/admin/profile', config);
-      setUserData(response.data);
-      setIsAuth(true);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  fetchUserData();
-}, [setIsAuth, ]);
-
-
-
-
-
-// console.log(userData);
 
 const filterReservationsByDay = (reservations, day) => {
   const filteredReservations = reservations.filter(reservation => {
@@ -139,7 +77,6 @@ useEffect(() => {
 }, [bookedDates]);
 
 console.log(bookedTimes);
-
 
 
 
@@ -183,8 +120,6 @@ console.log(bookedTimes);
         isAuth,
         setIsAuth,
         bookedTimes,
-        updateReservation,
-        deleteReservation,
         
         
       }}

@@ -22,7 +22,7 @@ const Payment: React.FC<PaymentGatewayProps> = ({ userInfo, bookingInfo }) => {
 
   async function handleClick(userId: string, path: string) {
     await deleteBooking(userId);
-
+    router.refresh()
     router.push("/dashboard");
   }
   const [currentTime, setCurrentTime] = useState(moment()); // Use Moment.js for currentTime
