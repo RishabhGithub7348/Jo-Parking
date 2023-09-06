@@ -74,14 +74,3 @@ Payment integration is seamlessly integrated into the app:
 
 - Users can also view payment history within their dashboard.
 
-## Contributing
-
-We welcome contributions to the Parking Web App project! Feel free to open issues, submit pull requests, or suggest new features. Please review our [contribution guidelines](CONTRIBUTING.md) for more information.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Thank you for using the Parking Web App! If you have any questions or need assistance, please feel free to contact us at [support@parkingwebapp.com](mailto:support@parkingwebapp.com). Happy parking!
