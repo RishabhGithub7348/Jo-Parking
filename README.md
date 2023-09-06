@@ -1,34 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Parking Web App
 
-## Getting Started
 
-First, run the development server:
+![image_2023-09-06_20-23-29](https://github.com/RishabhGithub7348/Jo-Parking/assets/75687649/781e58d2-b343-4ca2-8ac6-d155b1c50376)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Welcome to the Parking Web App project! This web application is built using Next.js and TypeScript, styled with Tailwind CSS. It provides a comprehensive solution for managing parking spaces in a building. Users can sign in using various authentication methods, book parking slots, view vehicle details, and make payments seamlessly.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Table of Contents
+Features
+Getting Started
+Authentication
+Dashboard
+Parking
+Payment
+Contributing
+License
+Features
+Personalized Sign In/Sign Up: Users can create accounts or sign in using various authentication methods, including OAuth providers and email.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Dashboard: The dashboard provides an overview of the user's parking bookings and vehicle details.
 
-## Learn More
+Parking Management: Users can browse through different floors and slots within a building, select a time slot from an organized calendar, and book parking slots.
 
-To learn more about Next.js, take a look at the following resources:
+Payment Integration: After booking a slot, users can make payments through the app. Once payment is confirmed, the booking is completed, and the slot is secured.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Getting Started
+To run the Parking Web App locally, follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Clone the repository: git clone https://github.com/yourusername/parking-web-app.git
 
-## Deploy on Vercel
+Navigate to the project directory: cd parking-web-app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Install dependencies: npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Start the development server: npm run dev
+
+Open your web browser and go to http://localhost:3000 to access the app.
+
+Authentication
+The Parking Web App supports multiple authentication methods:
+
+OAuth Providers: Users can sign in using popular OAuth providers like Google, Facebook, or GitHub.
+
+Email Authentication: Users can create an account and sign in using their email and password.
+
+Dashboard
+The dashboard is the central hub for users to manage their parking bookings and view vehicle details. Users can:
+
+View a list of their active parking bookings.
+
+See detailed information about their registered vehicles.
+
+Parking
+The parking section allows users to explore available parking spaces within a building:
+
+Building Floors: Users can select a specific building floor.
+
+Parking Slots: Users can browse through available parking slots on the selected floor.
+
+Booking: Users can choose a date and time from a well-organized calendar and book their parking slot.
+
+Payment
+Payment integration is seamlessly integrated into the app:
+
+After selecting and confirming a parking slot, users can make payments securely.
+
+Once payment is successful, the booking is completed, and the slot is reserved.
+
+Users can also view payment history within their dashboard.
+
+Contributing
+We welcome contributions to the Parking Web App project! Feel free to open issues, submit pull requests, or suggest new features. Please review our contribution guidelines for more information.
+
+License
+This project is licensed under the MIT License.
+
