@@ -76,10 +76,7 @@ Payment integration is seamlessly integrated into the app:
 
 ## Demo Video
 
-
-
-
-[![Watch the video](https://github.com/RishabhGithub7348/Jo-Parking/assets/75687649/55afed3c-791d-41dc-b7a4-588f9ad9bb87
+[![Watch the video](https://res.cloudinary.com/ds2fe7xai/image/upload/v1694046653/image_2023-09-07_06-00-24_hladr8.png
 )](https://www.youtube.com/watch?v=xpejaMXOpgc)
 
 
