@@ -71,6 +71,7 @@ const Form = (user:any) => {
     router.refresh()
 
     router.push('/dashboard');
+    window.location.reload()
 
 
     try {
