@@ -2,7 +2,7 @@
 
 ![image_2023-09-06_20-23-29](https://github.com/RishabhGithub7348/Jo-Parking/assets/75687649/a5907886-7063-49bd-b791-b6a6e5a9afe7)
 
-Welcome to the Parking Web App project! This web application is built using Next.js and TypeScript, styled with Tailwind CSS. It provides a comprehensive solution for managing parking spaces in a building. Users can sign in using various authentication methods, book parking slots, view vehicle details, and make payments seamlessly.
+Welcome to the Parking Web App project! This web application is built using Next.js and TypeScript, styled with Tailwind CSS and store the database in MongoDB. It provides a comprehensive solution for managing parking spaces in a building. Users can sign in using various authentication methods, book parking slots, view vehicle details, and make payments seamlessly.
 
 ## Table of Contents
 - [Features](#features)
@@ -23,6 +23,9 @@ Welcome to the Parking Web App project! This web application is built using Next
 - **Parking Management**: Users can browse through different floors and slots within a building, select a time slot from an organized calendar, and book parking slots.
 
 - **Payment Integration**: After booking a slot, users can make payments through the app. Once payment is confirmed, the booking is completed, and the slot is secured.
+- 
+- **MongoDB Database**: All user data and the booking slots data is directly connected to the MongoDB database so all data is remotely accessible .
+ 
 
 ## Getting Started
 
@@ -37,6 +40,9 @@ To run the Parking Web App locally, follow these steps:
 4. Start the development server: `npm run dev`
 
 5. Open your web browser and go to `http://localhost:3000` to access the app.
+
+6. Setup your env file model with all required paramters a model env has been given to this repo
+
 
 ## Authentication
 
