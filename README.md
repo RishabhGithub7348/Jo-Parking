@@ -31,9 +31,9 @@ Welcome to the Parking Web App project! This web application is built using Next
 
 To run the Parking Web App locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/parking-web-app.git`
+1. Clone the repository
 
-2. Navigate to the project directory: `cd parking-web-app`
+2. Navigate to the project directory
 
 3. Install dependencies: `npm install`
 
