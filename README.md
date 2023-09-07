@@ -23,8 +23,8 @@ Welcome to the Parking Web App project! This web application is built using Next
 - **Parking Management**: Users can browse through different floors and slots within a building, select a time slot from an organized calendar, and book parking slots.
 
 - **Payment Integration**: After booking a slot, users can make payments through the app. Once payment is confirmed, the booking is completed, and the slot is secured.
-- 
-- **MongoDB Database**: All user data and the booking slots data is directly connected to the MongoDB database so all data is remotely accessible .
+ 
+ - **MongoDB Database**: All user data and the booking slots data is directly connected to the MongoDB database so all data is remotely accessible .
  
 
 ## Getting Started
