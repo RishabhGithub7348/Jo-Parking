@@ -72,9 +72,16 @@ Payment integration is seamlessly integrated into the app:
 
 - Once payment is successful, the booking is completed, and the slot is reserved.
 
-- Users can also view payment history within their dashboard.
+- Users can also view slot booked within their dashboard.
 
 ## Demo Video
 
-[![Watch the video](https://github.com/RishabhGithub7348/Jo-Parking/assets/75687649/a5907886-7063-49bd-b791-b6a6e5a9afe7
+
+
+
+[![Watch the video](https://github.com/RishabhGithub7348/Jo-Parking/assets/75687649/55afed3c-791d-41dc-b7a4-588f9ad9bb87
 )](https://www.youtube.com/watch?v=xpejaMXOpgc)
+
+
+
+
