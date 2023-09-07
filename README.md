@@ -11,8 +11,8 @@ Welcome to the Parking Web App project! This web application is built using Next
 - [Dashboard](#dashboard)
 - [Parking](#parking)
 - [Payment](#payment)
-- [Contributing](#contributing)
-- [License](#license)
+- [Demo Video](#demo-video)
+
 
 ## Features
 
@@ -74,3 +74,7 @@ Payment integration is seamlessly integrated into the app:
 
 - Users can also view payment history within their dashboard.
 
+## Demo Video
+
+[![Watch the video](https://github.com/RishabhGithub7348/Jo-Parking/assets/75687649/a5907886-7063-49bd-b791-b6a6e5a9afe7
+)](https://www.youtube.com/watch?v=xpejaMXOpgc)
